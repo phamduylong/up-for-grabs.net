@@ -14,7 +14,8 @@ define([], () => {
     lightModeEnabled = storedValue === 'light';
   } else {
     // no stored theme - let's check user's preference
-    lightModeEnabled = !window.matchMedia('(prefers-color-scheme: dark)').matches;
+    lightModeEnabled = !window.matchMedia('(prefers-color-scheme: dark)')
+      .matches;
     window.localStorage.setItem('mode', lightModeEnabled ? 'light' : 'dark');
   }
 
